@@ -137,9 +137,8 @@ app.get('/random/stop', function(req,res) {
 const package = require('./package.json');
 const appName = package.name;
 const appVersion = package.version;
-const buildInfo = fs.readFileSync('build.txt');
 
-console.log(`Starting ${appName} v${appVersion}, build: ${buildInfo}.`);
+console.log(`Starting ${appName} v${appVersion}.`);
 
 app.listen(app.get('port'), '0.0.0.0', function() {
 	  console.log("Now serving quotes on port " + app.get('port'));
