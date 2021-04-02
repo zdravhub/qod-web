@@ -10,7 +10,8 @@ COPY build.txt .
 COPY views ./views
 COPY public ./public
 
-RUN npm install & npm audit fix
+RUN npm install 
+RUN npm audit fix
 
 EXPOSE 3000
 
