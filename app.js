@@ -134,8 +134,15 @@ app.get('/random/stop', function(req,res) {
     res.redirect('/');
 });
 
+const package = require('./package.json');
+const appName = package.name;
+const appVersion = package.version;
+const buildInfo = fs.readFileSync('build.txt');
+
+console.log(`Starting ${appName} v${appVersion}, build: ${buildInfo}.`);
+
 app.listen(app.get('port'), '0.0.0.0', function() {
-	  console.log("Serving quote web ui on port " + app.get('port'));
+	  console.log("Now serving quotes on port " + app.get('port'));
 });
 
 
