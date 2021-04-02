@@ -1,8 +1,9 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const fs = require('fs');
 const dateFormat = require('dateformat');
 const request = require('request');
+require('@instana/collector')({
+    autopProfile: true
+});
 
 const QOD_API_URL = process.env.QOD_API_URL;
 
@@ -17,10 +18,10 @@ function logErr(err) {
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
     extended: true
 }));
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');

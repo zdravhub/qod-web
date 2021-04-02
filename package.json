@@ -11,7 +11,7 @@
 		"express": "4.*",
 		"dateformat": "^3.0.*",
 		"request": "2.88.*",
-        "@instana/collector": "1.118.0"
+		"@instana/collector": "1.118.0"
 	},
 	"repository": {}
 }
