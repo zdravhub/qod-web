@@ -1,7 +1,8 @@
-FROM node:current-alpine
+FROM registry.redhat.io/rhel8/nodejs-16
 
-RUN mkdir /app
-WORKDIR /app
+ENV APP_ROOT=/opt/app-root
+
+WORKDIR $APP_ROOT
 
 COPY app.js .
 COPY LICENSE .
