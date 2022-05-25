@@ -21,8 +21,8 @@ spec:
           imagePullPolicy: Always
           ports:
             - name: http
-              containerPort: 3001
+              containerPort: 8080
               protocol: TCP
           env:
             - name: QOD_API_URL
-              value: "http://qod-api:3000"
+              value: "http://qod-api:8080"
