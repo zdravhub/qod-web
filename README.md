@@ -7,4 +7,4 @@ This web service listens on port `8080`. Please set the service for this deploym
 
 ### Environment Variables
 This deployment requires a single environment variable to access the qod-api deployment:
-- **QOD_API_URL** - the URL of the API service for the Quote of the Day application, usually 'http://' then the name of the service and the port (ie `http://qod-api:8080`)
+- **QOD_API_URL** - the URL of the API service for the Quote of the Day application, usually 'http://' or 'https://' then the name of the service and the port (ie `http://qod-api:8080`) - DO NOT USE trailing slash at the end (ie `http://qod-api:8080/`). Typically, in case of OpenShift this URL will be the route URL of the QOD API service.
