@@ -1,9 +1,6 @@
 const express = require('express');
 const dateFormat = require('dateformat');
 const request = require('request');
-require('@instana/collector')({
-    autopProfile: true
-});
 
 const QOD_API_URL = process.env.QOD_API_URL;
 
