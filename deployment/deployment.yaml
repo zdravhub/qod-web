@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: qod-web
-          image: ibmicpcoc/qod-web
+          image: quay.io/zzdravkov/qod-web
           imagePullPolicy: Always
           ports:
             - name: http
@@ -26,3 +26,4 @@ spec:
           env:
             - name: QOD_API_URL
               value: "http://qod-api:8080"
+
