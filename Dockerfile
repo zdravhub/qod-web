@@ -1,4 +1,4 @@
-FROM registry.redhat.io/rhel8/nodejs-16
+FROM node:16
 
 ENV APP_ROOT=/opt/app-root
 
@@ -16,3 +16,5 @@ RUN npm install
 EXPOSE 8080
 
 CMD ["node", "app.js"]
+
+
